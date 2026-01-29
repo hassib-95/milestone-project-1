@@ -116,7 +116,7 @@ footer {
         margin-bottom: 0; /* Remove mobile spacing */
     }
 
-    #nav-toggle {
+    .nav-toggle-label {
         display: none;
     }
 
