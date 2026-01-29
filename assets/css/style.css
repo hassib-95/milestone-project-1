@@ -25,6 +25,9 @@ header {
     width: 100%;
     z-index: 99;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 /* Remove underline from logo link */
@@ -67,6 +70,20 @@ nav {
     box-shadow: 0 2px 2px #3a3a3a;
     /* Hidden by default */
     display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+} 
+
+.nav-toggle-label {
+    font-size: 2rem;
 }
 
 /* Main content */
