@@ -13,7 +13,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
@@ -28,11 +27,13 @@ header {
     box-shadow: 0 2px 2px #3a3a3a;
 }
 
+/* Remove underline from logo link */
 header a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Logo styling */
 h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -40,6 +41,7 @@ h1 {
     color: #252525;
 }
 
+/* Navbar menu styling */
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -50,14 +52,26 @@ h1 {
     margin-bottom: 1em;
 }
 
+/* Active page underline */
 .active {
     border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar dropdown styling */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    /* Hidden by default */
+    display: none;
 }
 
 /* Main content */
 main {
     background-color: lightblue;
-    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
 }
 
