@@ -13,14 +13,14 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    color: #2b2b2b;
+    color: #1a1a1a; /* Updated text color */
     font-family: 'Lato', sans-serif;
-    background-color: #f7f7f7; /* Light background for a cleaner look */
+    background-color: #f8f9fa; /* Light background for a cleaner look */
 }
 
 /* Header */
 header {
-    background-color: #ffffff;
+    background-color: #0d1b2a; /* Dark header background for contrast */
     padding: 0.5rem 1.2rem; /* Slightly increased spacing for a modern feel */
     position: fixed;
     width: 100%;
@@ -33,14 +33,28 @@ header {
 
 header a {
     text-decoration: none;
-    color: inherit;
+    color: #ffffff;
+}
+
+/* header icons */
+header i {
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+/* Header hover styling */
+header a:hover,
+header i:hover {
+    color: #8ecaff; /* Ice blue hover effect */
+}
+header i:hover {
+    color: #8ecaff; /* Ice blue hover effect */
 }
 
 h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #1a1a1a;
+    color: #0057b8; /* Vibrant blue for a modern look */
     font-size: 1.8rem;
 }
 
@@ -55,18 +69,18 @@ h1 {
 }
 
 .active {
-    border-bottom: 2px solid #d32f2f; /* Red accent for the active link */
+    border-bottom: 2px solid #8ecaff; /* Ice blue for active link */
 }
 
 /* Mobile dropdown nav styling */
 nav {
     position: absolute;
-    background-color: #ffffff;
+    background-color: #0d1b2a;
     width: 100%;
     left: 0;
     padding: 0.5rem 1rem;
     box-shadow: 0 3px 5px rgba(0,0,0,0.18);
-    display: none; /* Hidden until the toggle is activated */
+    display: none; /* Hidden by default on mobile */
     top: 100%;
 }
 
@@ -88,7 +102,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
+    background-color: #0d1b2a;
     color: #ffffff;
     padding: 1rem;
     text-align: center;
@@ -135,7 +149,7 @@ footer {
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover{
-        border-bottom: 1px solid #3a3a3a;
+        border-bottom: 1px solid #8ecaff; /* Ice blue hover effect */
     }
 }
 
