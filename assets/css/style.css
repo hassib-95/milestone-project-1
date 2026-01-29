@@ -1,68 +1,64 @@
-/* Google fonts import */
+/* Google fonts import for the main site typography */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by the browser */
+/* Reset default browser spacing and sizing so everything starts clean */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* General styles */
+/* General page styling */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    color: #2b2b2b; /* Slightly darker for stronger contrast */
+    color: #2b2b2b;
     font-family: 'Lato', sans-serif;
-    background-color: #f7f7f7; /* Light gym‑style background */
+    background-color: #f7f7f7; /* Light background for a cleaner look */
 }
 
 /* Header */
 header {
     background-color: #ffffff;
-    padding: 0.5rem 1.2rem; /* Slightly more modern spacing */
+    padding: 0.5rem 1.2rem; /* Slightly increased spacing for a modern feel */
     position: fixed;
     width: 100%;
     z-index: 99;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.18); /* Stronger gym‑style shadow */
+    box-shadow: 0 3px 5px rgba(0,0,0,0.18); /* Subtle shadow to lift the header */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Remove underline from logo link */
 header a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Logo styling */
 h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 3px; /* Slightly bolder */
-    color: #1a1a1a; /* Stronger gym tone */
+    letter-spacing: 3px;
+    color: #1a1a1a;
     font-size: 1.8rem;
 }
 
-/* Navbar menu styling */
 #menu {
-    font-size: 115%; /* Slightly larger for gym feel */
+    font-size: 115%;
     letter-spacing: 3px;
     list-style-type: none;
 }
 
 #menu > li {
-    margin-bottom: 0.8em; /* Tighter spacing */
+    margin-bottom: 0.8em; /* Spacing between items on mobile */
 }
 
-/* Active page underline */
 .active {
-    border-bottom: 2px solid #d32f2f; /* Gym red accent */
+    border-bottom: 2px solid #d32f2f; /* Red accent for the active link */
 }
 
-/* Navbar dropdown styling */
+/* Mobile dropdown nav styling */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -70,7 +66,7 @@ nav {
     left: 0;
     padding: 0.5rem 1rem;
     box-shadow: 0 3px 5px rgba(0,0,0,0.18);
-    display: none; /* Hidden by default */
+    display: none; /* Hidden until the toggle is activated */
     top: 100%;
 }
 
@@ -79,34 +75,28 @@ nav {
     display: block;
 }
 
+/* Hide the checkbox  */
 #nav-toggle {
     display: none;
-} 
-
-.nav-toggle-label {
-    font-size: 2.2rem; /* Slightly larger */
-    font-weight: 700;  /* Stronger gym feel */
-    color: #1a1a1a;
-    cursor: pointer;
 }
 
 /* Main content */
 main {
     flex: 1 0 auto;
-    margin-top: 55px; /* Adjusted for new header spacing */
+    margin-top: 55px;
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a1a; /* Strong gym footer */
+    background-color: #1a1a1a;
     color: #ffffff;
     padding: 1rem;
     text-align: center;
 }
 
-/* Media query: tablets and larger (768px and up) */
+/* Tablet and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
-
+    /* Header */
     nav {
         display: block;
         position: relative;
@@ -124,9 +114,21 @@ footer {
     #menu > li {
         padding-left: 1.2rem;
         margin-bottom: 0; /* Remove mobile spacing */
-    } 
+    }
 
-    .nav-toggle-label {
+    #nav-toggle {
         display: none;
     }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        margin-top: 89px;
+    }
 }
+
