@@ -21,32 +21,32 @@ body {
 /* Header */
 header {
     background-color: #0d1b2a; /* Dark header background for contrast */
-    padding: 0.5rem 1.2rem; /* Slightly increased spacing for a modern feel */
-    position: fixed;
+    height: 55px; /* Mobile header height */
     width: 100%;
+    position: fixed;
+    top: 0;
     z-index: 99;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.18); /* Subtle shadow to lift the header */
+    padding: 0 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.18);
 }
 
 header a {
     text-decoration: none;
-    color: #0057b8; /* titan blue to match logo */
+    color: #0057b8; /* Titan blue to match logo */
 }
 
-/* header icons */
+/* Header icons */
 header i {
-    color: #0057b8; /* titan blue to match logo */
+    color: #0057b8; /* Titan blue to match logo */
     font-size: 1.6rem;
     transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
+
 /* Header hover styling */
 header a:hover,
-header i:hover {
-    color: #8ecaff; /* Ice blue hover effect */
-}
 header i:hover {
     color: #8ecaff; /* Ice blue hover effect */
 }
@@ -58,6 +58,7 @@ h1 {
     color: #0057b8; /* Vibrant blue for a modern look */
     font-size: 1.8rem;
 }
+
 
 #menu {
     font-size: 115%;
@@ -82,7 +83,7 @@ nav {
     padding: 0.5rem 1rem;
     box-shadow: 0 3px 5px rgba(0,0,0,0.18);
     display: none; /* Hidden by default on mobile */
-    top: 100%;
+    top: 55px; /* Sits directly under mobile header */
 }
 
 /* Nav toggle */
@@ -90,15 +91,22 @@ nav {
     display: block;
 }
 
-/* Hide the checkbox  */
+/* Hide the checkbox */
 #nav-toggle {
     display: none;
+}
+
+/* Burger icon label */
+.nav-toggle-label {
+    font-size: 1.8rem;
+    color: #0057b8;
+    cursor: pointer;
 }
 
 /* Main content */
 main {
     flex: 1 0 auto;
-    margin-top: 55px;
+    margin-top: 55px; /* Matches mobile header height */
 }
 
 /* Footer */
@@ -122,12 +130,11 @@ footer {
     font-size: 180%; /* Larger icons for premium look */
     color: #0057b8; /* Titan blue to match logo */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
-
 }
 
 #social-networks i:hover {
-    color: #8ecaff; /* Ice blue hover effect to match pallette */
-} 
+    color: #8ecaff; /* Ice blue hover effect to match palette */
+}
 
 /* Small mobile devices (480px and below) */
 @media screen and (max-width: 480px) {
@@ -143,14 +150,21 @@ footer {
 
 /* Tablet and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
-    /* Header */
+
+    /* Header becomes taller on desktop */
+    header {
+        height: 89px;
+        padding: 0 2rem;
+    }
+
+    /* Desktop nav */
     nav {
         display: block;
-        position: relative;
-        box-shadow: none;
-        width: fit-content;
-        padding-right: 1rem;
+        position: static;
         background-color: transparent;
+        box-shadow: none;
+        width: auto;
+        padding: 0;
     }
 
     #menu {
@@ -164,16 +178,16 @@ footer {
     }
 
     .nav-toggle-label {
-        display: none;
+        display: none; /* Hide burger icon on desktop */
     }
 
     #logo {
         font-size: 280%;
-        line-height: 75px;
+        line-height: 89px;
         margin: 0 0.5rem;
     }
 
-    /* Main content */
+    /* Main content spacing for desktop header */
     main {
         margin-top: 89px;
     }
@@ -181,7 +195,7 @@ footer {
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 1px solid #8ecaff; /* Ice blue hover effect */
     }
 }
