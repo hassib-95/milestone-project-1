@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     color: #1a1a1a; /* Updated text color */
     font-family: 'Lato', sans-serif;
-    background-color: #f8f9fa; /* Light background for a cleaner look */
+    background-color: #0d1b2a; 
 }
 
 /* Header */
@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.18);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4); /* Stronger shadow like Love Running */
 }
 
 header a {
@@ -106,17 +106,16 @@ nav {
 main {
     flex: 1 0 auto;
     margin-top: 55px; /* Matches mobile header height */
+    padding-bottom: 20px;
 }
 
 /* Hero section */
 #hero {
-    height: 60vh; 
+    height: 70vh; 
     width: 100%;
-    background-color: #0d1b2a; 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../images/hero.jpeg") no-repeat center center/cover;
     position: relative;
+    padding-top: 5px; /* Prevents hero from touching header edge */
 }
 
 /* Hero text overlay */
@@ -145,6 +144,7 @@ main {
 @media screen and (min-width: 768px) {
     #hero {
         height: 75vh;
+        padding-top: 5px;
     }
 
     #hero-text h2 {
@@ -162,6 +162,7 @@ footer {
     color: #ffffff;
     padding: 1rem;
     text-align: center;
+    width: 100%;
 }
 
 #social-networks {
@@ -188,10 +189,11 @@ footer {
     #social-networks {
         justify-content: center;
         gap: 20px; /* Tighter spacing for small screens */
+        flex-wrap: wrap; /* Allow icons to wrap */
     }
 
     #social-networks i {
-        font-size: 150%; /* Slightly smaller icons for small screens */
+        font-size: 140%; /* Slightly smaller icons for small screens */
     }
 }
 
