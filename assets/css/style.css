@@ -33,13 +33,14 @@ header {
 
 header a {
     text-decoration: none;
-    color: #ffffff;
+    color: #0057b8; /* titan blue to match logo */
 }
 
 /* header icons */
 header i {
-    color: #ffffff;
+    color: #0057b8; /* titan blue to match logo */
     font-size: 1.6rem;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 /* Header hover styling */
 header a:hover,
@@ -119,7 +120,7 @@ footer {
 
 #social-networks i {
     font-size: 180%; /* Larger icons for premium look */
-    color: #ffffff; /* default white color */
+    color: #0057b8; /* Titan blue to match logo */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
 
 }
